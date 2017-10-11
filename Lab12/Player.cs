@@ -9,12 +9,31 @@ namespace Lab12
     abstract class Player //abstract class called Player, holds generateRoshambo method
     {
         //method generateRoshambo returns string
-        protected string rock;
-        protected string paper;
-        protected string scissors;
 
+        private string name;
 
-        
+        // public override string ToString()
+        //{
+        //    //return Rashambo(); //value?
+        //}
+
+        public string Name
+        {
+            set { name = value; }
+            get { return name; }
+        }
+
+        public Player()
+        {
+            name = "";
+        }
+
+        public Player(string n)
+        {
+            Name = n;
+        }
+
+        public abstract string generateRoshambo(); //do not need virtual because all abstracts are virtual
 
     }
 }
