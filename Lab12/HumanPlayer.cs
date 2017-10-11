@@ -10,7 +10,29 @@ namespace Lab12
     {
         public override string generateRoshambo()
         {
-            return Console.ReadLine();
+            Console.WriteLine("Rock, paper, or scissors? (R/P/S?)");
+            string HumanChoice = Console.ReadLine().ToLower();
+            
+            if (HumanChoice == "R")
+            {
+                return "Rock";
+            }
+
+            else if (HumanChoice == "P")
+            {
+                return "Paper";
+            }
+
+            else if (HumanChoice == "R")
+            {
+                return "Scissors";
+            }
+
+            else
+            {
+                return "Please enter valid action"; //correct validation here
+            }
+
         }
     }
 }

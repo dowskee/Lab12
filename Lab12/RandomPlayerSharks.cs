@@ -10,23 +10,23 @@ namespace Lab12
     {
         public override string generateRoshambo()
         {
-            Random choice = new Random();
-            for (int i = 0; i < 4; i++)
-            {
-                if (choice = 1)
+            Random rnd = new Random(Guid.NewGuid().GetHashCode()); //generates a new sequence each time the method is called
+            int RandomPlay = rnd.Next(1, 3);
+
+            if (RandomPlay == 1)
                 {
                     return "Rock";
                 }
-                else if (choice = 2)
+                else if (RandomPlay == 2)
                 {
                     return "Paper";
                 }
-                else if (choice = 3)
+                else if (RandomPlay == 3)
                 {
                     return "Scissors";
                 }
-                
-            }
+
+            return generateRoshambo();
             // return random value of 1, 2, or 3. If 1, return Rock, if 2, return Paper, if 3, return Scissors
         }
     }
