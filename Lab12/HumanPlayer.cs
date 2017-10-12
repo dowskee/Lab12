@@ -13,17 +13,17 @@ namespace Lab12
             Console.WriteLine("Rock, paper, or scissors? (R/P/S?)");
             string HumanChoice = Console.ReadLine().ToLower();
             
-            if (HumanChoice == "R")
+            if (HumanChoice == "R" || HumanChoice == "r")
             {
                 return "Rock";
             }
 
-            else if (HumanChoice == "P")
+            else if (HumanChoice == "P" || HumanChoice== "p")
             {
                 return "Paper";
             }
 
-            else if (HumanChoice == "R")
+            else if (HumanChoice == "S" || HumanChoice == "s")
             {
                 return "Scissors";
             }
